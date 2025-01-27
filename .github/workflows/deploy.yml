@@ -22,6 +22,12 @@ jobs:
       - name: Build project
         run: npm run build:github-pages
 
+      - name: Create .nojekyll file
+        run: touch ./dist/.nojekyll
+
+      - name: Copy index.html to 404.html
+        run: cp ./dist/index.html ./dist/404.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
