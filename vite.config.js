@@ -22,5 +22,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: mode === 'github-pages' ? '/Mk.IX-Client/' : './',
+  base: process.env.VITE_BASE || './',
 })
