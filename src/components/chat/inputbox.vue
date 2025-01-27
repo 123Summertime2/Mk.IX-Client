@@ -89,6 +89,7 @@ export default {
   data() {
     return {
       input: "",
+      lastInput: "",
       payload: {
         type: "text",
         size: null,
@@ -159,6 +160,7 @@ export default {
           }
         }
       }))
+      this.lastInput = this.input
       this.input = ""
       this.atList = new Set()
     },
@@ -236,11 +238,15 @@ export default {
 
     // shift + enter也可以发送
     onKeyDown(event) {
-      if (!this.input) { return }
-
       if (event.shiftKey && event.key === 'Enter') {
         event.preventDefault()
         this.sendingText()
+      }
+
+      if (event.key === "ArrowUp") {
+        const temp = this.input
+        this.input = this.lastInput
+        this.lastInput = temp
       }
     },
 

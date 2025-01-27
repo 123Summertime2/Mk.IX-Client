@@ -168,8 +168,8 @@ export default {
         decipher.update(forge.util.createBuffer(forge.util.decode64(message.payload.content)))
         const finish = decipher.finish()
         if (finish) {
-          message.payload.meta.encrypt = false
           message.payload.content = forge.util.decodeUtf8(decipher.output.data)
+          message.payload.meta.encrypt = false
           return
         }
       } catch (error) {

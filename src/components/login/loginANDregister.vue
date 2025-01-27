@@ -1,7 +1,7 @@
 <template>
   <div class="title">{{ currentText.title }}</div>
   <div>
-    <span class="subTitle">IP/域名:端口</span>
+    <span class="subTitle">服务器地址</span>
     <el-input v-model="adress" prefix-icon="Place" clearable />
     <span class="subTitle">{{ currentText.subTitle2 }}</span>
     <el-input v-model="accountORusername" prefix-icon="User" clearable />

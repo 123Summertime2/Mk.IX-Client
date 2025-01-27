@@ -378,7 +378,7 @@ export default {
 
       const widthMinThreshold = 0.15 * window.innerWidth
       const widthMaxThreshold = 0.5 * window.innerWidth
-      if (this.groupWidth < widthMinThreshold || this.groupWidth > widthMaxThreshold) {
+      if (window.innerWidth > 768 && (this.groupWidth < widthMinThreshold || this.groupWidth > widthMaxThreshold)) {
         ElMessage({
           message: `修改失败 宽度必须在[${widthMinThreshold}px, ${widthMaxThreshold}px]之间`,
           duration: 8000,
@@ -473,7 +473,7 @@ export default {
     },
 
     jumping() {
-      window.open('https://github.com/123summertime/sgr-client', '_blank')
+      window.open('https://github.com/123summertime/Mk.IX-Client', '_blank')
     },
 
   },
