@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "build:github-pages": "vite build --base /MkIX-Client/",
+    "build:github-pages": "vite build --base /Mk.IX-Client/",
     "preview": "vite preview"
   },
   "dependencies": {
